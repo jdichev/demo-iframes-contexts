@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+  <script type="text/javascript">
+  </script>
+</head>
+
+<body>
+
+  <iframe id='aframe' src="http://localhost:8081/cross-origin-b.html"></iframe>
+
+  <br>
+
+  <div id="app">-</div>
+  <button id="start">start</button>
+
+  <script>
+    var container = document.getElementById('app');
+    var startBtn = document.getElementById('start');
+
+    var i = 0;
+    function work() {
+      i += 1;
+      container.innerText = "current count " + i;
+    }
+
+    startBtn.addEventListener('click', function () {
+      work();
+    });
+  </script>
+</body>
+
+</html>
